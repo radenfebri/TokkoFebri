@@ -7,7 +7,7 @@
     {{-- PILIH LIGA --}}
     <section class="pilih-liga mt-4">
         <h3><strong>Pilih Liga</strong></h3>
-        <div class="row mt-4">
+        <div class="row mt-2">
             @foreach ($ligas as $data)
             <div class="col">
                 <div class="card shadow">
@@ -21,9 +21,9 @@
     </section>
 
     {{-- Best Product --}}
-    <section class="best-product mb-5">
+    <section class="best-product mb-5 mt-5">
         <h3><strong>Best Product</strong></h3>
-        <div class="row mt-4">
+        <div class="row mt-2">
             @foreach ($product as $data)
             <div class="col">
                 <div class="card">
