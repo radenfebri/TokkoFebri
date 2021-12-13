@@ -2,17 +2,16 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Liga;
 use App\Models\Product;
 use Livewire\Component;
 
-class Home extends Component
+class ProductIndex extends Component
 {
     public function render()
     {
-        return view('livewire.home', [
-            'product' => Product::take(4)->get(),
-            'ligas' => Liga::all(),
+        $products = Product::paginate(8);
+        return view('livewire.product-index', [
+            'products' => $products,
         ])->extends('layouts.app')->section('content');
     }
 }

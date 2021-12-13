@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Home;
+use App\Http\Livewire\ProductIndex;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', Home::class, 'home')->name('home');
+Route::get('/products', ProductIndex::class, 'product-index')->name('products');

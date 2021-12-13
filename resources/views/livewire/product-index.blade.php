@@ -1,31 +1,20 @@
 <div class="container">
-    {{-- BANNER --}}
-    <div class="banner">
-        <img src="{{ url('assets/slider/slider1.png') }}" alt="">
-    </div>
-
-    {{-- PILIH LIGA --}}
-    <section class="pilih-liga mt-4">
-        <h3><strong>Pilih Liga</strong></h3>
-        <div class="row mt-2">
-            @foreach ($ligas as $data)
-            <div class="col">
-                <div class="card shadow">
-                    <div class="card-body text-center">
-                        <img src="{{ url('assets/liga') }}/{{ $data->gambar }}" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-            @endforeach
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-dark" style="text-decoration: none;">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">List Jarsey</li>
+                </ol>
+            </nav>
         </div>
-    </section>
-
-    {{-- Best Product --}}
-    <section class="product mb-5 mt-5">
-        <h3><strong>Best Product</strong></h3>
+    </div>
+    <h2>List <strong>Jarsey</strong></h2>
+    {{-- All Product --}}
+    <section class="product mb-5">
         <div class="row mt-2">
-            @foreach ($product as $data)
-            <div class="col">
+            @foreach ($products as $data)
+            <div class="col-md-3 mb-3">
                 <div class="card">
                     <div class="card-body text-center">
                         <img src="{{ url('assets/jersey') }}/{{ $data->gambar }}" class="img-fluid">
